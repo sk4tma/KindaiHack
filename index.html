@@ -25,11 +25,12 @@
 
       }
 
+      const buildUrl = `${location.pathname.replace(/[^/]+$/, '')}Build/`;
       createUnityInstance(document.querySelector("#unity-canvas"), {
         arguments: [],
-        dataUrl: "Build/DisaBuild.data",
-        frameworkUrl: "Build/DisaBuild.framework.js",
-        codeUrl: "Build/DisaBuild.wasm",
+        dataUrl: buildUrl + "/DisaBuild.data",
+        frameworkUrl: buildUrl + "/DisaBuild.framework.js",
+        codeUrl: buildUrl + "/DisaBuild.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "HackGame",
